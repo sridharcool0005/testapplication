@@ -1,0 +1,33 @@
+{
+  "name": "agentpluswebapp",
+  "version": "1.0.0",
+  "description": "A barebones Node.js app using [Express 4](http://expressjs.com/).",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.heroku.com/agentpluswebapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@meanie/mongoose-upsert-many": "^1.5.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "formidable": "^1.2.2",
+    "googleapis": "^51.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "moment": "^2.26.0",
+    "mongoose": "^5.8.6",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.2",
+    "passport": "^0.4.1",
+    "request": "^2.88.2",
+    "validator": "^12.1.0"
+  }
+}

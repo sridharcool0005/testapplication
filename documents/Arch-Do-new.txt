@@ -1,0 +1,69 @@
+App  Architecture
+
+Roles: 
+1. Agent
+2. Deo
+
+API Documentation
+
+1. Registration --> Create / update
+Http Method: POST
+I/p: 
+role: Deo
+email: string
+address: string
+mobile: number
+
+2. Login
+Http Method: POST
+I/p: 
+Role: Deo
+email: string
+password: string
+
+
+3. Dashboard summary 
+GET
+
+4. Invite agents -- Send email using server
+@POST
+/agent/invite
+body: {email: ""}
+email validity check
+return appropriate errors/error-code like 400 bad request
+
+5. Agent Creation : New sign-up form - to be filled by agent
+API: /agent 
+Http Method: POST
+I/p: name: string
+     email: string
+     password: string
+     phoneNumber: string
+     address: string
+     approved: boolean (default: false)
+     target: number
+     acheivements: number
+     soldPolicies: number
+     
+
+6. Get All agents
+@GET
+/agents
+
+7. Get New Agents
+@GET
+/agents?status=new
+
+8. Approve Agents: 
+API: /agent/approve
+Http Method: PUT
+body: 
+{agentId: string, approve: number(1,0)}
+
+system generated email/SMS:
+to: DO for new approval
+to: agent for approval or deny
+
+enhancements:
+language support for email/sms
+comments/reason for deny
